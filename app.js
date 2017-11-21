@@ -1,15 +1,15 @@
 const express   = require("express");
 const app       = express();
-//const sass      = require("node-sass-middleware");
+const sass      = require("node-sass-middleware");
 const path      = require("path");
 
-// app.use(
-//     sass({
-//         src: __dirname + "/public",
-//         dest: __dirname + "/public",
-//         debug: true
-//     })
-// );
+app.use(
+    sass({
+        src: __dirname + "/public",
+        dest: __dirname + "/public",
+        debug: true
+    })
+);
 app.use(express.static(path.join(__dirname, "public")));
 
 

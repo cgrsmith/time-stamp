@@ -1,3 +1,24 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Timestamp API</title>
+</head>
 
-<h1>Test</h1>
+<body>
+    <h1>Timestamp API</h1>
+
+    <p>A simple API that takes either a natural language date (ie January 15, 2017),
+        or unix time code as a GET request and responds with a JSON object containing
+        both the natural and unix represenation of that date.</p>
+
+    <p>If an invalid request is made, responds with the same JSON object with
+        Null as the values.</p>
+
+    <p><em>Natural Input:</em> <code><strong>url</strong>/january%2015%202015</code> 
+        <br>(note: <code>%20</code> is how browsers interpret a space character).</p>
+    
+    <p><em>Unix Time-Code Input:</em> <code><strong>url</strong>/1421244000000</code>.</p>
+
+</body>
+</html>
